@@ -2,6 +2,7 @@ import person from "../../assets/images/person2.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import SocialMedia from "../common/socialMedia/SocialMedia";
+import person1 from "../../assets/images/tomchua.png";
 
 const Profile = () => {
   return (
@@ -15,7 +16,7 @@ const Profile = () => {
           <div className="max-w-106 h-117 object-fill overflow-hidden rounded-xl">
             <img
               className="bg-soft-white h-[120%] object-cover"
-              src={person}
+              src={person1}
               alt=""
             />
           </div>
@@ -33,31 +34,32 @@ const Profile = () => {
           <h2
             className={`text-2xl xxs:text-3xl sm:text-4xl lg:text-[38px] text-[min(24px,38px)] max-md:text-center font-semibold mb-8`}
           >
-            I am Professional User Experience Designer
+            I am an IT Software Engineer Manager and Mobile Developer
           </h2>
           <div
             className={`text-xs xs:text-[16px] lg:text-lg font-normal max-md:text-center text-gray-600`}
           >
             <p className={``}>
-              I design and develop services for customers specializing creating
-              stylish, modern websites, web services and online stores. My
-              passion is to design digital user experiences.
+              Credentialed with Bachelor's in Information Technology, I've excelled in mobile and web 
+              app development since 2017. Leading the Flutter Developer team at DOT-Ready, I specialize in 
+              cross-platform mobile app creation using Flutter, with expertise in HTML5 and Android.
+               Managing the entire app lifecycle, I ensure seamless design, coding, testing, and deployment. 
+               Alongside technical proficiency, I mentor developers and win hackathons.
             </p>
             <p className="mt-3">
-              I design and develop services for customers specializing creating
-              stylish, modern websites, web services.
+              My commitment to innovation drives me to deliver superior user-centric solutions while fostering collaborative teamwork.
             </p>
           </div>
           <div className="mt-8 flex max-md:justify-center">
             <a
               className="btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 btn-primary text-xs xxs:text-[14px] sm:text-[16px]"
-              href="#!"
+              href="#portfolio"
             >
               My Projects
             </a>
             <a
               className={`btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 hover:border-picto-primary bg-white duration-300 transition-all hover:text-picto-primary  ms-4 text-xs xxs:text-[14px] sm:text-[16px]`}
-              href="#!"
+              href="/Tom-Oliver-Chua-CV.pdf" download
             >
               <FontAwesomeIcon icon={faDownload} /> Download CV
             </a>
