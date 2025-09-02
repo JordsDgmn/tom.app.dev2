@@ -9,25 +9,30 @@ import "./testimonial.css";
 
 const testimonialData = [
   {
-    message:
-      "Working with this team was a fantastic experience. Their attention to detail and commitment to quality exceeded our expectations.",
-    quote: `From the initial consultation to the final delivery, every step was handled professionally. The end result was a product that not only met our needs but also impressed our stakeholders. Highly recommended!`,
-    name: "Esther Howard",
-    designation: "Managing Director, ABC Company",
+
+    quote: `Joining seminars has never been this easy! I love how I can register with just a few clicks and receive my certificate instantly`,
+    name: "Anthony A. Seromines",
+    designation: "Marketing Professional",
   },
   {
-    message:
-      "Their expertise in UI/UX design helped us transform our digital presence and improve user engagement.",
-    quote: `The team demonstrated a deep understanding of our requirements and delivered a solution that was both visually appealing and highly functional. Communication was clear throughout the project.`,
-    name: "Ali Haider",
-    designation: "COO, XYZ Company",
+
+    quote: `Joining seminars has never been this hassle-free! I love how I can register quickly and receive my certificate without any complications.`,
+    name: "Katrina O. Jimenez",
+    designation: "HR Manager",
   },
   {
-    message:
-      "Professional, reliable, and creative—everything you want in a development partner.",
-    quote: `They delivered our project on time and went above and beyond to ensure our satisfaction. The new features have made a significant difference for our users. We look forward to working together again.`,
-    name: "Elon Max",
-    designation: "Managing Director, KFC Company",
+
+    quote: `No more filling out long forms every time I join a seminar! This platform saves so much time and effort.`,
+    name: "James Vincent A. Morcillo",
+    designation: "IT Specialist",
+  },
+
+  {
+
+    quote: `The automatic certification feature is a game-changer. No more waiting for days to receive my certificate!
+`,
+    name: "Paul Jasper L. Gaza",
+    designation: "Educator",
   },
 ];
 
@@ -57,3 +62,4 @@ const Testimonial = () => {
 };
 
 export default Testimonial;
+
