@@ -3,9 +3,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Projects = ({ data }) => {
   return (
-    <div className="max-w-106 rounded-lg outline-[#FFFFFF] hover:shadow-2xl duration-300 transition-all shadow-gray-300 border border-gray-200">
-      <img src={data?.image} alt={`${data?.title} image`} className="max w-full h-auto"/>
-      <div className="p-4 xs:p-8">
+    <div className="h-full flex flex-col rounded-lg outline-[#FFFFFF] hover:shadow-2xl duration-300 transition-all shadow-gray-300 border border-gray-200">
+      <div className="w-full aspect-[16/9] bg-white rounded-t-lg flex items-center justify-center overflow-hidden">
+        <img
+          src={data?.image}
+          alt={`${data?.title} image`}
+          className="max-w-full max-h-full object-contain p-2"
+        />
+      </div>
+      <div className="p-4 xs:p-8 flex-1 flex flex-col">
         <p className="text-gray-400 text-xs font-medium">{data?.category}</p>
         <p className="text-gray-900 text-md xxs:text-lg font-semibold pt-1 mb-3">
           {data?.title}
@@ -18,7 +24,7 @@ const Projects = ({ data }) => {
         </p>
         <a
           href={data?.link}
-          className="btn hover:border-picto-primary hover:text-picto-primary bg-white text-sm xs:text-[16px] font-semibold hover:gap-3 xs:hover:gap-4 transition-all duration-300 mt-5 xs:py-5.75 px-6 max-sm:w-full"
+          className="btn hover:border-picto-primary hover:text-picto-primary bg-white text-sm xs:text-[16px] font-semibold hover:gap-3 xs:hover:gap-4 transition-all duration-300 mt-5 xs:py-5.75 px-6 max-sm:w-full mt-auto"
         >
           View
           <span className="ms-1 xs:ms-3">

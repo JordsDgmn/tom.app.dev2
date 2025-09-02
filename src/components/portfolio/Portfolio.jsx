@@ -147,9 +147,9 @@ const Portfolio = () => {
       </div>
 
       <div className="mx-auto flex justify-center">
-        <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-6">
+        <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-6 items-stretch">
           {projectData.map((data, index) => (
-            <div key={index} onClick={() => setSelectedProject(data)}>
+            <div key={index} onClick={() => setSelectedProject(data)} className="h-full">
               <Projects data={data} />
             </div>
           ))}
