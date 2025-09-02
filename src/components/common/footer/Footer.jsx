@@ -39,7 +39,7 @@ const Footer = () => {
         </p>
       </div>
       <p className="text-white text-center max-xs:text-[12px] max-md:text-[14px] w-full py-10">
-        Developed by Oliver Chua       {/{" "}/}
+        Developed by Oliver Chua       
         {/*<a
           href="https://www.themewagon.com/"
           className="underline font-bold"
