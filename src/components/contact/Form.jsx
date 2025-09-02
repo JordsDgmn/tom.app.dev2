@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 const telegramSVG = (
   <svg
     className="w-4 md:w-6 aspect-square"
@@ -12,10 +14,70 @@ const telegramSVG = (
   </svg>
 );
 
+
+
+
 const commonClass =
   "input input-lg border-0 border-b-2 focus:outline-none focus:placeholder:text-picto-primary placeholder:text-[15px] md:placeholder:text-lg focus:border-picto-primary border-[#E6E8EB] w-full rounded-none px-0";
 
+
+
+
 const Form = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    location: '',
+    budget: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('http://localhost:3001/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus({ type: 'success', message: 'Message sent successfully!' });
+        setFormData({
+          name: '',
+          email: '',
+          location: '',
+          budget: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus({ type: 'error', message: result.message || 'Failed to send message' });
+      }
+    } catch (error) {
+      setSubmitStatus({ type: 'error', message: 'Network error. Please try again.' });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div>
       <p className="text-[12px] xs:text-[14px] max-lg:text-center sm:text-lg font-normal text-soft-dark">
@@ -23,52 +85,83 @@ const Form = () => {
         opportunities.
       </p>
       <div className="mx-2">
-        <form className="flex flex-col gap-4 mt-4">
+        <form className="flex flex-col gap-4 mt-4" onSubmit={handleSubmit}>
           <input
             type="text"
+            name="name"
             placeholder="Name*"
             className={`${commonClass}`}
+            value={formData.name}
+            onChange={handleChange}
             required
           />
           <input
             type="email"
+            name="email"
             placeholder="Email*"
             className={`${commonClass}`}
+            value={formData.email}
+            onChange={handleChange}
             required
           />
           <input
             type="text"
+            name="location"
             placeholder="Location*"
             className={`${commonClass}`}
+            value={formData.location}
+            onChange={handleChange}
             required
           />
 
           <div className="flex max-xs:flex-col max-xs:gap-4">
             <input
               type="text"
+              name="budget"
               placeholder="Budget*"
               className={`${commonClass} xs:w-[50%] me-5`}
+              value={formData.budget}
+              onChange={handleChange}
               required
             />
             <input
               type="text"
+              name="subject"
               placeholder="Subject*"
               className={`${commonClass}`}
+              value={formData.subject}
+              onChange={handleChange}
               required
             />
           </div>
 
-          <input
-            type="text"
+          <textarea
+            name="message"
             placeholder="Message*"
-            className={`${commonClass}`}
+            className={`${commonClass} min-h-[100px] resize-none`}
+            value={formData.message}
+            onChange={handleChange}
             required
           />
+          
+          {submitStatus && (
+            <div className={`p-3 rounded-md ${
+              submitStatus.type === 'success' 
+                ? 'bg-green-100 text-green-800 border border-green-200' 
+                : 'bg-red-100 text-red-800 border border-red-200'
+            }`}>
+              {submitStatus.message}
+            </div>
+          )}
+          
           <button
             type="submit"
-            className="btn gap-3 max-lg:mx-auto btn-primary rounded-sm mt-5 text-[13px] md:text-[16px] w-fit font-semibold lg:mt-12.5 p-2 md:px-4"
+            disabled={isSubmitting}
+            className={`btn gap-3 max-lg:mx-auto btn-primary rounded-sm mt-5 text-[13px] md:text-[16px] w-fit font-semibold lg:mt-12.5 p-2 md:px-4 ${
+              isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+            }`}
           >
-            Submit {telegramSVG}
+            {isSubmitting ? 'Sending...' : 'Submit'} {telegramSVG}
           </button>
         </form>
       </div>
