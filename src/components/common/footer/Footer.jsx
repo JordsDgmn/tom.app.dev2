@@ -39,15 +39,15 @@ const Footer = () => {
         </p>
       </div>
       <p className="text-white text-center max-xs:text-[12px] max-md:text-[14px] w-full py-10">
-        Developed with ❤️ by{" "}
-        <a
-          href="https://www.themewagon.com"
+        Developed by Oliver Chua       {/{" "}/}
+        {/*<a
+          href="https://www.themewagon.com/"
           className="underline font-bold"
           target="_blank"
         >
           ThemeWagon
-        </a>
-      </p>
+        </a> */}
+      </p> 
     </div>
   );
 };

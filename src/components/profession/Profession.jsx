@@ -1,23 +1,24 @@
 import Roles from "./Roles";
+import { Link } from "react-scroll";
 
 const rolesData = [
   {
     id: 1,
-    title: "User Experience (UX)",
+    title: "Application Architecture & Leadership",
     description:
-      "I design intuitive and enjoyable experiences by understanding user needs, conducting research, and creating wireframes and prototypes that enhance usability.",
+      "I design scalable systems and RESTful APIs, set best practices, lead agile sprints, code reviews, and CI/CD with Azure DevOps/GitHub Actions. Focus on quality, performance, security, and usability across teams.",
   },
   {
     id: 2,
-    title: "User Interface (UI)",
+    title: "Mobile App Development (Android · iOS · Flutter/KMM)",
     description:
-      "I craft visually appealing and consistent interfaces, focusing on layout, color, and typography to ensure a seamless and engaging user journey.",
+      "I build high-quality Android (Kotlin) and iOS (SwiftUI) apps, plus cross-platform with Flutter/KMM. Integrate Firebase, analytics, payments, and deploy to Google Play/App Store with robust testing and release pipelines.",
   },
   {
     id: 3,
-    title: "Web Development",
+    title: "Web, APIs, Cloud & DevOps",
     description:
-      "I build responsive and high-performance web applications using modern technologies, ensuring accessibility, scalability, and maintainability.",
+      "I develop modern web apps (Laravel/Node/React), secure APIs, and manage cloud infra on AWS, Azure, and IBM Cloud (NGINX, PostgreSQL/MySQL, S3/EC2). Automate deployments and monitoring with container-ready setups.",
   },
 ];
 
@@ -31,22 +32,23 @@ const Profession = () => {
         <p className="section-title max-md:text-center">What I do?</p>
         <div className="mt-6 text-[14px]">
           <p className="text-xs sm:text-lg font-normal text-gray-400 mb-4">
-            I specialize in designing user experiences, crafting engaging
-            interfaces, and building robust web applications that deliver value
-            and usability.
+            I help companies ship reliable products end-to-end—from systems
+            design to mobile and web delivery—grounded in secure architectures,
+            elegant UX, and measurable business value.
           </p>
-          <p className="text-xs sm:text-lg font-normal text-gray-400">
-            My approach combines creativity and technical expertise to deliver
-            solutions that are both visually appealing and highly functional for
-            users.
-          </p>
+
         </div>
-        <a
-          href="#!"
+
+        <Link
+          href="#contact"
+          to={"contact"}
+          smooth={true}
+          duration={900}
           className="mt-5 md:mt-12.5 btn btn-primary text-white w-fit md:py-3 md:px-6 text-[12px] sm:text-[16px] font-semibold max-md:mx-auto max-md:mb-5"
         >
           Say Hello!
-        </a>
+        </Link>
+
       </div>
       <div className="">
         {rolesData.map((role, index) => (
