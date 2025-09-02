@@ -59,3 +59,6 @@ body {
   background: radial-gradient(circle at -10% 0%, #da4df166 1%, transparent 25%),
     radial-gradient(circle at 110% 30%, #c4f5e9b2 5%, transparent 25%);
 }
+html {
+  scroll-behavior: smooth;
+}
