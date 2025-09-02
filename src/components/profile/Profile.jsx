@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import SocialMedia from "../common/socialMedia/SocialMedia";
 import person1 from "../../assets/images/tomchua.png";
+import person2 from "../../assets/images/tomchua1.jpg";
 
 const Profile = () => {
   return (
@@ -15,8 +16,8 @@ const Profile = () => {
         <div className="xxl:max-w-106 w-auto h-auto xxl:max-h-126">
           <div className="max-w-106 h-117 object-fill overflow-hidden rounded-xl">
             <img
-              className="bg-soft-white h-[120%] object-cover"
-              src={person1}
+              className="bg-soft-white h-[110%] object-cover"
+              src={person2}
               alt=""
             />
           </div>

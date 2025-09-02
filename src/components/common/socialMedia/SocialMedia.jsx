@@ -4,15 +4,14 @@ import {
   faFacebookF,
   faInstagram,
   faLinkedin,
+  faChrome,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const socialIcons = [
-  { icon: faFacebookF, link: "#!" },
-  { icon: faDribbble, link: "#!" },
-  { icon: faInstagram, link: "#!" },
-  { icon: faLinkedin, link: "#!" },
-  { icon: faBehance, link: "#!" },
+  { icon: faFacebookF, link: "https://www.facebook.com/chuatomoliver" },
+  { icon: faLinkedin, link: "https://ph.linkedin.com/company/supsoft-tech" },
+  { icon: faChrome, link: "https://www.certicode.tech/" },
 ];
 
 const SocialMedia = () => {
