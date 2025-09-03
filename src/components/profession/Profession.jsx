@@ -20,6 +20,24 @@ const rolesData = [
     description:
       "I develop modern web apps (Laravel/Node/React), secure APIs, and manage cloud infra on AWS, Azure, and IBM Cloud (NGINX, PostgreSQL/MySQL, S3/EC2). Automate deployments and monitoring with container-ready setups.",
   },
+  {
+    id: 4,
+    title: "Developer Team Lead",
+    description:
+      "Spearheaded the end-to-end development of transformative AI solutions, most notably an AI-powered digital platform for Mitsubishi Bank. Led cross-functional teams in requirements gathering, architecture design, model development, ensuring scalability, security, and compliance with financial industry standards.",
+  },
+  {
+    id: 5,
+    title: "App Deployment",
+    description:
+      "We provide end-to-end app deployment services across AWS, DigitalOcean, and Hostinger for web applications, as well as Google Play and the Apple App Store for mobile applications.",
+  },
+  {
+    id: 6,
+    title: "Project Manager",
+    description:
+      "Successfully managed the full project lifecycle of innovative AI initiatives, overseeing planning, execution, and delivery of an AI digital platform for Mitsubishi Bank that enhanced operational efficiency and elevated customer experience.",
+  },
 ];
 
 const Profession = () => {
@@ -50,7 +68,7 @@ const Profession = () => {
         </Link>
 
       </div>
-      <div className="">
+      <div className="flex flex-wrap gap-2 w-auto max-h-[400px] overflow-y-auto">
         {rolesData.map((role, index) => (
           <Roles role={role} key={index} />
         ))}

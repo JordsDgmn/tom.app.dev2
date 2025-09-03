@@ -1,22 +1,16 @@
 const TestimonialTemplate = ({ testimonial }) => {
   return (
-    <div className="flex flex-col h-full">
-      <div className="text-center mx-auto">
+    <div className="bg-white shadow-lg rounded-2xl p-6 max-w-lg mx-auto text-center border border-gray-200">
+      <img
+        src={testimonial.avatar}
+        alt={testimonial.name}
+        className="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-blue-100 shadow-sm"
+      />
 
-      </div>
-      <div className="text-center">
-        <p className="text-[14px] sm:text-lg font-medium pb-6">
-          “{testimonial?.quote}”
-        </p>
-        <div className="mx-auto">
-          <p className="text-[14px] sm:text-[16px] md:text-lg font-medium mb-2">
-            {testimonial?.name}
-          </p>
-          <p className="text-[14px] md:text-[16px] font-light">
-            {testimonial?.designation}
-          </p>
-        </div>
-      </div>
+      <p className="text-gray-600 italic mb-4">“{testimonial.quote}”</p>
+
+      <h4 className="text-lg font-semibold text-gray-800">{testimonial.name}</h4>
+      <p className="text-sm text-gray-500">{testimonial.designation}</p>
     </div>
   );
 };
