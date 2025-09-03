@@ -8,7 +8,7 @@ const WorkTogether = () => {
         <p className="text-white md:font-semibold text-2xl sm:text-3xl md:text-5xl pb-8">
           Do you have a Project Idea? Let's discuss your project!
         </p>
-        <p className="text-[#A5ACB5] text-xs sm:text-lg font-normal text-center pb-8">
+        <p className="text-[#64748B] text-xs sm:text-lg font-normal text-center pb-8">
           I'm always open to discussing new projects and creative ideas. Let's
           connect and build something amazing together.
         </p>

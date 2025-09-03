@@ -8,7 +8,7 @@ const Main = () => {
     <div data-theme={"light"} className="relative">
       <NavBar />
       <Outlet />
-      <div className="bg-[#2A374A]">
+      <div className="bg-[#002F6C]">
         <Footer />
       </div>
       <ScrollToTop />
