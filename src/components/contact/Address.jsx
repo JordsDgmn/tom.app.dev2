@@ -13,7 +13,7 @@ const Address = ({ item }) => {
     >
       <div
         className={`h-10 md:h-12 aspect-square ${
-          hover ? "bg-picto-primary" : "bg-[#EDD8FF80]"
+          hover ? "bg-picto-primary" : "bg-[#FEF3C780]"
         } center rounded-[4px]`}
       >
         <FontAwesomeIcon
@@ -24,10 +24,10 @@ const Address = ({ item }) => {
         />
       </div>
       <div className="ms-3.25">
-        <p className="text-[12px] md:text-[14px] text-[#424E60] font-normal">
+        <p className="text-[12px] md:text-[14px] text-[#64748B] font-normal">
           {item?.title}:
         </p>
-        <p className="text-[14px] md:text-[16px] text-[#132238] font-medium">
+        <p className="text-[14px] md:text-[16px] text-[#002F6C] font-medium">
           {item?.description}
         </p>
       </div>
