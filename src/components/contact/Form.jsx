@@ -14,14 +14,8 @@ const telegramSVG = (
   </svg>
 );
 
-
-
-
 const commonClass =
-  "input input-lg border-0 border-b-2 focus:outline-none focus:placeholder:text-picto-primary placeholder:text-[15px] md:placeholder:text-lg focus:border-picto-primary border-[#E2E8F0] w-full rounded-none px-0";
-
-
-
+  "input input-lg border-0 border-b-2 focus:outline-none focus:placeholder:text-picto-primary placeholder:text-[15px] md:placeholder:text-lg focus:border-picto-primary border-[#E6E8EB] w-full rounded-none px-0";
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -42,23 +36,36 @@ const Form = () => {
     });
   };
 
+  // Always use same-origin path during development to leverage Vite proxy
+  const API_URL = '/send-mail.php';
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
 
+    // debug: show which URL the client will call
+    console.debug('Contact form POST ->', API_URL, formData);
+ 
     try {
-      const response = await fetch('http://localhost:3001/api/contact', {
+      const response = await fetch(API_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
+     console.debug('Fetch response:', response);
 
+      if (!response.ok) {
+        const text = await response.text().catch(() => null);
+        throw new Error(text || `HTTP ${response.status}`);
+      }
+ 
       const result = await response.json();
-
-      if (result.success) {
+ 
+      // match PHP response { status: "success" }
+      if (result.status === "success") {
         setSubmitStatus({ type: 'success', message: 'Message sent successfully!' });
         setFormData({
           name: '',
@@ -72,7 +79,9 @@ const Form = () => {
         setSubmitStatus({ type: 'error', message: result.message || 'Failed to send message' });
       }
     } catch (error) {
-      setSubmitStatus({ type: 'error', message: 'Network error. Please try again.' });
+      const msg = error?.message || 'Network error. Please try again.';
+      setSubmitStatus({ type: 'error', message: msg });
+      console.error('Send email error:', error);
     } finally {
       setIsSubmitting(false);
     }
