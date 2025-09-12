@@ -16,14 +16,13 @@ body {
   color: var(--text);
 }
 
-/* Container */
 .achievements-container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 2rem;
+  
 }
 
-/* Back Button */
 .back-btn {
   display: inline-block;
   margin-bottom: 20px;
@@ -40,7 +39,6 @@ body {
   background: #001a40;
 }
 
-/* Hero */
 .hero {
   text-align: center;
   padding: 2rem;
@@ -48,6 +46,14 @@ body {
   background: var(--card);
   box-shadow: var(--shadow);
   margin-bottom: 2rem;
+  background: radial-gradient(
+      circle at 12% 100%,
+      #FEF3C7 1% 5px,
+      transparent 15%
+    ),
+      radial-gradient(circle at 95% -15%, #3B82F666 5%, transparent 30%),
+      radial-gradient(circle at center right, #1E40AFb2 2%, transparent 35%); 
+  
 }
 .hero h1 {
   margin: 0;
@@ -58,7 +64,6 @@ body {
   color: var(--muted);
 }
 
-/* Grid */
 .grid {
   display: grid;
   gap: 1.5rem;
@@ -176,14 +181,12 @@ body {
   }
 }
 
-/* Footer */
 footer {
   margin-top: 2.5rem;
   text-align: center;
   color: var(--muted);
   font-size: 0.875rem;
 }
-/* Media Gallery */
 .media-gallery {
   max-width: 1100px;
   margin: 4rem auto;
@@ -314,7 +317,6 @@ footer {
   display: flex;
   align-items: center;
 }
-/* Progress Bars */
 .progress-group {
   margin-bottom: 1rem;
   text-align: left;
@@ -340,6 +342,16 @@ footer {
   border-radius: 6px;
   transition: width 0.6s ease;
 }
-
+body {
+   background: radial-gradient(
+      circle at 12% 100%,
+      #c7d4fe 1% 5px,
+      transparent 15%
+    ),
+    /* bottom left */
+      radial-gradient(circle at 95% -15%, #1E40AFb2 5%, transparent 30%),
+    /* top right */
+      radial-gradient(circle at center right, #3B82F666 2%, transparent 35%); /* center right */
+}
 
 
