@@ -8,6 +8,7 @@
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
   <div class="achievements-container">
@@ -98,57 +99,189 @@
   </div>
     </section>
 
-    <section class="media-gallery">
-        <h2>Achievement Highlights</h2>
-        
-       
-        <div class="media-grid">
-            <div class="media-item">
-            <img src="../src/assets/images/blog/achievement-5.jpg" alt="Achievement 5">
-            <p>Certificate of lorem ipsum dolor sit amet</p>
+    <section class="media-gallery text-center">
+        <h2 class="text-2xl font-bold mb-6">Achievement Highlights</h2>
+
+        <div class="certificates-section-title mt-12">
+            <h3 class="text-xl font-semibold mb-6">Seminars</h3>
+        </div>
+
+        <div class="certificates-row flex flex-wrap justify-center gap-6">
+            <div class="media-item w-72">
+                <img src="../src/assets/images/blog/seminar-1.jpg" alt="Seminar 1" 
+                    class="cursor-pointer w-full h-72 object-cover rounded-lg shadow-md"
+                    onclick="openModal(this.src)">
+                <div class="mt-3 text-center">
+                <p class="text-xl font-extrabold text-white"><strong>BEYOND THE CODE</strong></p>
+                </div>
+            </div>
+
+            <div class="media-item w-72">
+                <img src="../src/assets/images/blog/seminar-2.jpg" alt="Seminar 2" 
+                    class="cursor-pointer w-full h-72 object-cover rounded-lg shadow-md"
+                    onclick="openModal(this.src)">
+                <div class="mt-3 text-center">
+                <p class="text-xl font-extrabold text-white"><strong>FROM RAW DATA TO INSIGHTS</strong></p>
+                </div>
+            </div>
+
+            <div class="media-item w-72">
+                <img src="../src/assets/images/blog/seminar-3.jpg" alt="Seminar 3" 
+                    class="cursor-pointer w-full h-72 object-cover rounded-lg shadow-md"
+                    onclick="openModal(this.src)">
+                <div class="mt-3 text-center">
+                <p class="text-xl font-extrabold text-white"><strong>Blockchain Technology & Cryptocurrency</strong></p>
+                </div>
             </div>
 
             <div class="media-item">
-            <video controls>
+            <video controls class="mx-auto rounded-lg shadow-md">
                 <source src="../src/assets/images/blog/Certicode.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <p>Tom Tech Video Example</p>
+            <p class="mt-2">Tom Tech Video Example</p>
             </div>
         </div>
 
-        <!-- Section Title for Certificates -->
-        <div class="certificates-section-title">
-            <h3>Seminar Certificates</h3>
+        <div class="certificates-section-title mt-12">
+            <h3 class="text-xl font-semibold mb-6">Certificates</h3>
         </div>
 
-        <!-- Bottom Row: 4 Certificates -->
-        <div class="certificates-row">
-            <div class="media-item">
-            <img src="../src/assets/images/blog/achievement-1.jpg" alt="Achievement 1">
-            <p>Certificate of lorem ipsum dolor sit amet</p>
+        <div class="certificates-row flex flex-wrap justify-center gap-6">
+            <div class="media-item w-72">
+                <img src="../src/assets/images/blog/achievement-1.jpg" alt="Achievement 1"
+                    class="cursor-pointer w-full h-72 object-cover rounded-lg shadow-md"
+                    onclick="openModal(this.src)">
+                <div class="mt-3 text-center">
+                <p class="text-xl font-extrabold text-white"><strong>Point-of-Sale, Inventory and Sale Forecasting System for External Business Affairs Office</strong></p>
+                <br>
+                <p class="text-gray-300">Cavite State University - General Trias City</p>
+                <p class="text-gray-400 text-sm">November 30, 2024</p>
+                </div>
             </div>
 
-            <div class="media-item">
-            <img src="../src/assets/images/blog/achievement-2.jpg" alt="Achievement 2">
-            <p>Certificate of lorem ipsum dolor sit amet</p>
+            <div class="media-item w-72">
+                <img src="../src/assets/images/blog/achievement-2.jpg" alt="Achievement 2"
+                    class="cursor-pointer w-full h-72 object-cover rounded-lg shadow-md"
+                    onclick="openModal(this.src)">
+                <div class="mt-3 text-center">
+                <p class="text-xl font-extrabold text-white"><strong>Blockchain Technology and Crypto Currency</strong></p>
+                <br>
+                <p class="text-gray-300">Our Lady of Fatima University - Quezon City</p>
+                <p class="text-gray-400 text-sm">September 24, 2024</p>
+                </div>
             </div>
 
-            <div class="media-item">
-            <img src="../src/assets/images/blog/achievement-3.jpg" alt="Achievement 3">
-            <p>Certificate of lorem ipsum dolor sit amet</p>
+            <div class="media-item w-72">
+                <img src="../src/assets/images/blog/achievement-3.jpg" alt="Achievement 3"
+                    class="cursor-pointer w-full h-72 object-cover rounded-lg shadow-md"
+                    onclick="openModal(this.src)">
+                <div class="mt-3 text-center">
+                <p class="text-xl font-extrabold text-white"><strong>Lorem ipsum dolor imet</strong></p>
+                <br>
+                <p class="text-gray-300">Our Lady of Fatima University - Quezon City</p>
+                <p class="text-gray-400 text-sm">June 14, 2025</p>
+                </div>
             </div>
 
-            <div class="media-item">
-            <img src="../src/assets/images/blog/achievement-4.jpg" alt="Achievement 4">
-            <p>Certificate of lorem ipsum dolor sit amet</p>
+            <div class="media-item w-72">
+                <img src="../src/assets/images/blog/achievement-4.jpg" alt="Achievement 4"
+                    class="cursor-pointer w-full h-72 object-cover rounded-lg shadow-md"
+                    onclick="openModal(this.src)">
+                <div class="mt-3 text-center">
+                <p class="text-xl font-extrabold text-white"><strong>On-the-Job Training Program</strong></p>
+                <br>
+                <p class="text-gray-300">Polytechnic University of the Philippines - Sto.Tomas</p>
+                <p class="text-gray-400 text-sm">June 26, 2025</p>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <footer>
-      <p>© 2025 Your Name. All rights reserved.</p>
-    </footer>
+            <div class="media-item w-72">
+                <img src="../src/assets/images/blog/achievement-5.jpg" alt="Achievement 5"
+                    class="cursor-pointer w-full h-72 object-cover rounded-lg shadow-md"
+                    onclick="openModal(this.src)">
+                <div class="mt-3 text-center">
+                <p class="text-xl font-extrabold text-white"><strong>TechnoFair and Pitch Presentation 2025</strong></p>
+                <br>
+                <p class="text-gray-300">FEU Institute of Technology</p>
+                <p class="text-gray-400 text-sm">July 11, 2025</p>
+                </div>
+            </div>
+            </div>
+
+
+        </section>
+
   </div>
+  <footer class="w-full bg-[#002F6C] text-neutral-200 pt-25 md:pt-40">
+    <div class="max-w-7xl mx-auto px-3">
+        <div class="flex max-md:flex-col justify-between items-center h-full w-full">
+        <a href="#" class="flex items-center border-0">
+            <img src="../src/assets/logo.png" class="h-8 sm:h-14 rounded-2xl" alt="logo" />
+            <p class="text-3xl sm:text-[32px] my-auto ms-[12px] font-semibold text-white">
+            Tom.AppDev
+            </p>
+        </a>
+
+        <div class="mx-7 max-md:my-7 text-center">
+            <a class="mx-2 group inline-block relative w-fit text-[12px] sm:text-[16px] text-white" href="#home">
+            Home
+            <span class="absolute left-0 bottom-0 h-0.5 w-full bg-white scale-x-0 duration-300 group-hover:scale-x-100"></span>
+            </a>
+            <a class="mx-2 group inline-block relative w-fit text-[12px] sm:text-[16px] text-white" href="#about">
+            About
+            <span class="absolute left-0 bottom-0 h-0.5 w-full bg-white scale-x-0 duration-300 group-hover:scale-x-100"></span>
+            </a>
+            <a class="mx-2 group inline-block relative w-fit text-[12px] sm:text-[16px] text-white" href="#process">
+            Process
+            <span class="absolute left-0 bottom-0 h-0.5 w-full bg-white scale-x-0 duration-300 group-hover:scale-x-100"></span>
+            </a>
+            <a class="mx-2 group inline-block relative w-fit text-[12px] sm:text-[16px] text-white" href="#portfolio">
+            Portfolio
+            <span class="absolute left-0 bottom-0 h-0.5 w-full bg-white scale-x-0 duration-300 group-hover:scale-x-100"></span>
+            </a>
+            <a class="mx-2 group inline-block relative w-fit text-[12px] sm:text-[16px] text-white" href="#blog">
+            Blog
+            <span class="absolute left-0 bottom-0 h-0.5 w-full bg-white scale-x-0 duration-300 group-hover:scale-x-100"></span>
+            </a>
+            <a class="mx-2 group inline-block relative w-fit text-[12px] sm:text-[16px] text-white" href="#services">
+            Services
+            <span class="absolute left-0 bottom-0 h-0.5 w-full bg-white scale-x-0 duration-300 group-hover:scale-x-100"></span>
+            </a>
+            <a class="mx-2 group inline-block relative w-fit text-[12px] sm:text-[16px] text-white" href="#contact">
+            Contact
+            <span class="absolute left-0 bottom-0 h-0.5 w-full bg-white scale-x-0 duration-300 group-hover:scale-x-100"></span>
+            </a>
+        </div>
+
+        <p class="text-[12px] sm:text-[16px] text-white">
+            Copyright © 2025 Picto.
+        </p>
+        </div>
+
+        <p class="text-white text-center max-xs:text-[12px] max-md:text-[14px] w-full py-10">
+        Developed by Oliver Chua
+        </p>
+    </div>
+    </footer>
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+    <div class="relative max-w-3xl w-full">
+        <button onclick="closeModal()" class="absolute top-3 right-3 text-white text-3xl font-bold">&times;</button>
+        <img id="modalImage" src="" alt="Expanded view" class="w-full max-h-[90vh] object-contain rounded-lg shadow-lg">
+    </div>
+    </div>
 </body>
+<script>
+  function openModal(src) {
+    document.getElementById("modalImage").src = src;
+    document.getElementById("imageModal").classList.remove("hidden");
+    document.getElementById("imageModal").classList.add("flex");
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").classList.remove("flex");
+    document.getElementById("imageModal").classList.add("hidden");
+  }
+</script>
+
 </html>
