@@ -46,8 +46,8 @@ if ($name === '' || $email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL))
 
 // SMTP Configuration - use environment variables in production
 $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
-$smtpUser = getenv('SMTP_USER') ?: 'projecttesting784@gmail.com';
-$smtpPass = getenv('SMTP_PASS') ?: 'ehhdjwpyokzkbgjo'; // Use environment variable in production
+$smtpUser = getenv('SMTP_USER') ?: 'dummydambi@gmail.com';
+$smtpPass = getenv('SMTP_PASS') ?: 'hjxu mcqt blnp dtnt'; // Use environment variable in production
 $smtpPort = getenv('SMTP_PORT') ?: 587;
 $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
 
@@ -71,7 +71,7 @@ try {
     $mail->addReplyTo($email, $name);
 
     // Recipient(s) - deliver to your inbox
-    $mail->addAddress('projecttesting784@gmail.com');
+    $mail->addAddress('dummydambi@gmail.com');
 
     // Content
     $mail->isHTML(true);
