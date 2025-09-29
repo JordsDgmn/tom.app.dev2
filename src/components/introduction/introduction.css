@@ -5,3 +5,55 @@
   padding-left: 2px;
   padding-right: 2px;
 }
+
+/* Create a visual foundation for Tom's half-body image */
+.hero-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+}
+
+/* Add a subtle platform/base effect */
+.hero-image-container::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 40px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(147, 197, 253, 0.15) 50%, rgba(219, 234, 254, 0.08) 100%);
+  border-radius: 50%;
+  filter: blur(15px);
+  z-index: 5;
+}
+
+/* Add a subtle glow at the bottom */
+.hero-image-container::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 20px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(147, 197, 253, 0.3) 50%, rgba(219, 234, 254, 0.2) 100%);
+  border-radius: 50%;
+  filter: blur(10px);
+  z-index: 6;
+}
+
+.hero-image {
+  position: relative;
+  z-index: 10;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
+  object-position: top center !important;
+  max-height: 550px;
+  /* Subtle fade at bottom to make crop look intentional */
+  mask-image: linear-gradient(to bottom, black 85%, rgba(0,0,0,0.8) 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, rgba(0,0,0,0.8) 95%, transparent 100%);
+}

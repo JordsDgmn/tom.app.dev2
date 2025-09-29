@@ -43,17 +43,9 @@ body {
   text-align: center;
   padding: 2rem;
   border-radius: var(--radius);
-  background: var(--card);
+  background: white;
   box-shadow: var(--shadow);
   margin-bottom: 2rem;
-  background: radial-gradient(
-      circle at 12% 100%,
-      #FEF3C7 1% 5px,
-      transparent 15%
-    ),
-      radial-gradient(circle at 95% -15%, #3B82F666 5%, transparent 30%),
-      radial-gradient(circle at center right, #1E40AFb2 2%, transparent 35%); 
-  
 }
 .hero h1 {
   margin: 0;
@@ -342,16 +334,48 @@ footer {
   border-radius: 6px;
   transition: width 0.6s ease;
 }
+/* Cool infinite background scrolling animation */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@-moz-keyframes bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@-o-keyframes bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@keyframes bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+
 body {
-   background: radial-gradient(
-      circle at 12% 100%,
-      #c7d4fe 1% 5px,
-      transparent 15%
-    ),
-    /* bottom left */
-      radial-gradient(circle at 95% -15%, #1E40AFb2 5%, transparent 30%),
-    /* top right */
-      radial-gradient(circle at center right, #3B82F666 2%, transparent 35%); /* center right */
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  
+  -webkit-animation: bg-scrolling-reverse .92s infinite; /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse .92s infinite; /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse .92s infinite; /* Opera 12+ */
+  animation: bg-scrolling-reverse .92s infinite; /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 

@@ -23,14 +23,14 @@ const menu = navItems.map((item) => (
       onClick={handleMenuClick}
       to={item.url.toLowerCase()}
       smooth={true}
-      duration={1000}
+      duration={300}
       spy={true}
       offset={-140}
       activeStyle={{
         backgroundColor: "#002F6C",
         color: "white",
       }}
-      className={`hover:text-picto-primary px-5 py-3 mx-1`}
+      className={`text-white hover:text-blue-300 px-5 py-3 mx-1 transition-colors duration-200`}
     >
       {item.name}
     </Link>
@@ -54,14 +54,14 @@ const NavBar = () => {
     <div
       className={`sticky top-0 ${
         position > 50
-          ? "bg-soft-white border-b border-gray-300"
-          : "bg-white border-white"
+          ? "bg-gray-900/90 backdrop-blur-md border-b border-gray-700"
+          : "bg-picto-primary-dark/98 backdrop-blur-sm border-picto-primary-dark"
       } z-50 transition-all duration-1000`}
     >
       <div className="navbar flex justify-between mx-auto content">
         <div className="flex items-center justify-between">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white hover:bg-gray-700">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -79,7 +79,7 @@ const NavBar = () => {
             </div>
             <ul
               tabIndex={0}
-              className={`menu menu-lg dropdown-content rounded-box z-1 mt-3 w-lvw p-2 shadow font-semibold flex-nowrap bg-white text-black`}
+              className={`menu menu-lg dropdown-content rounded-box z-1 mt-3 w-lvw p-2 shadow font-semibold flex-nowrap bg-gray-900/95 backdrop-blur-md text-white`}
             >
               {menu}
             </ul>
@@ -89,11 +89,11 @@ const NavBar = () => {
             href="#introduction"
             to={`introduction`}
             smooth={true}
-            duration={900}
+            duration={300}
             className="flex items-center border-0 lg:max-xxl:ps-5"
           >
             <img src={logo} className="h-8 sm:h-14 rounded-2xl" alt="logo" />
-            <p className="text-2xl sm:text-[32px] my-auto ms-[12px] font-semibold">
+            <p className="text-2xl sm:text-[32px] my-auto ms-[12px] font-semibold text-white">
               Tom.AppDev
             </p>
           </Link>
@@ -109,7 +109,7 @@ const NavBar = () => {
               href="#contact"
               to={`contact`}
               smooth={true}
-              duration={900}
+              duration={300}
             >
               Contact
             </Link>

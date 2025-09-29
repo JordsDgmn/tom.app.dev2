@@ -2,6 +2,7 @@ import person from "../../assets/images/person.png";
 import "./introduction.css";
 import InformationSummary from "./InformationSummary";
 import { Link } from "react-scroll";
+import { useState, useEffect } from "react";
 
 // Information summary data
 const informationSummaryData = [
@@ -23,76 +24,98 @@ const informationSummaryData = [
 ];
 
 const Introduction = () => {
+  const [displayedText, setDisplayedText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const titles = ["ICT Head", "Solutions Architect", "Full-Stack Developer"];
+  const [titleIndex, setTitleIndex] = useState(0);
+
+  useEffect(() => {
+    const currentTitle = titles[titleIndex];
+    
+    if (currentIndex < currentTitle.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText(currentTitle.slice(0, currentIndex + 1));
+        setCurrentIndex(currentIndex + 1);
+      }, 100);
+      return () => clearTimeout(timeout);
+    } else {
+      const timeout = setTimeout(() => {
+        setCurrentIndex(0);
+        setDisplayedText("");
+        setTitleIndex((prev) => (prev + 1) % titles.length);
+      }, 2000);
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, titleIndex, titles]);
+
   return (
     <div
-      className="flex max-lg:flex-col-reverse sm:justify-between pt-10 lg:pt-31.5 lg:mb-27.5 max-xl:gap-2 p-2 max-xxl:px-4"
+      className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen px-4 lg:px-8 py-16"
       id="introduction"
     >
-      <div className="w-full flex flex-col justify-between max-lg:text-center">
-        <div className="pt-13 me-31.5 w-full lg:w-auto transition-all duration-500">
-          <p className="text-3xl xxs:text-4xl sm:max-xl:text-5xl xl:text-6xl font-semibold w-full">
-            Hello, I’m
-            <span className="text-nowrap shrink-0 inline-block w-full">
-              Tom Oliver Chua
-            </span>
-
-            {/* Tagline */}
-            <p className="text-sm xxs:text-base lg:text-[18px] mt-2 text-gray-500">
-              ICT Head · Solutions Architect · Full-Stack Developer
-            </p>
-
+      {/* Left Content */}
+      <div className="space-y-8 lg:order-1">
+        <div className="space-y-4">
+          <p className="text-lg text-white font-medium">I'm</p>
+          <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
+            Tom Oliver Chua
+          </h1>
+          <p className="text-lg lg:text-xl text-blue-300 font-medium h-8 flex items-center">
+            {displayedText}
+            <span className="animate-pulse ml-1">|</span>
           </p>
-             {/* Direct from Resume pdf: */}
-          {/* <p className="text-xs xxs:text-lg lg:text-[18px] my-6">
-            Innovative and results-driven ICT leader with a strong background in{" "}
-            <span className="bg-highlight">application architecture</span>,{" "}
-            <span className="bg-highlight">backend & mobile development</span>,
-            and <span className="bg-highlight">AI-powered solutions</span>.
-            Led the AI Digital Platform for a major Japanese bank at IBM, and
-            ship cross-platform apps using Kotlin/SwiftUI/Flutter with secure,
-            scalable REST APIs on AWS · Azure · IBM Cloud.
-          </p> */}
+        </div>
 
-            {/* resume pdf + canva resume + summarized: */}
-          <p className="text-xs xxs:text-lg lg:text-[18px] my-6">
+        <div className="space-y-3">
+          <p className="text-base lg:text-lg text-white leading-relaxed max-w-lg">
             I build user-centric systems for web and mobile, combining
-            <span className="bg-highlight"> application architecture</span>, 
-            <span className="bg-highlight"> backend &amp; mobile development</span>, and 
-            <span className="bg-highlight"> AI</span> to deliver secure, scalable products.
+            <strong> application architecture</strong>, 
+            <strong> backend & mobile development</strong>, and 
+            <strong> AI</strong> to deliver secure, scalable products.
+          </p>
+          <p className="text-base lg:text-lg text-white leading-relaxed max-w-lg bg-black/30 backdrop-blur-sm px-4 py-2 rounded-lg">
             I lead teams and ship reliably from idea to launch.
           </p>
-
-
-                    
-          <p className="text-center lg:text-start">
-            <Link
-              className="btn-primary btn btn-xs xxs:btn-lg text-white"
-              href="#contact"
-              to={"contact"}
-              smooth={true}
-              duration={900}
-            >
-              Say Hello!
-            </Link>
-          </p>
-
         </div>
-        <div className="mx-auto lg:mx-0 relative">
-          <div className="grid max-xxs:grid-flow-col grid-cols-3 w-fit mt-10 gap-1">
-            {informationSummaryData.map((item) => (
-              <InformationSummary key={item.id} item={item} />
-            ))}
-          </div>
+
+        <div className="flex items-start">
+          <a
+            href="/Tom Oliver Chua Resume.pdf"
+            download="Tom Oliver Chua Resume.pdf"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 inline-block"
+          >
+            Download CV
+          </a>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-3 gap-6 pt-8">
+          {informationSummaryData.map((item) => (
+            <div key={item.id} className="text-center lg:text-left">
+              <div className="text-2xl lg:text-3xl font-bold text-white">
+                {item.description}
+              </div>
+              <div className="text-sm text-gray-200 mt-1">
+                {item.title}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      <div
-        className={`max-w-134 w-full h-full max-lg:mx-auto aspect-[536/636] relative`}
-      >
-        <img
-          className={`shadow-2xl shadow-gray-200 w-full h-full absolute bottom-0 object-cover bg-white rounded-3xl`}
-          src={person}
-          alt="person"
-        />
+
+      {/* Right Image */}
+      <div className="lg:order-2 relative hero-image-container">
+        <div className="relative max-w-md mx-auto lg:max-w-none w-full">
+          {/* Decorative background elements */}
+          <div className="absolute -top-4 -right-4 w-72 h-72 bg-yellow-300 rounded-full opacity-20 blur-3xl"></div>
+          <div className="absolute top-10 -left-4 w-32 h-32 bg-orange-300 rounded-full opacity-30 blur-2xl"></div>
+          
+          <img
+            className="relative z-10 hero-image"
+            src={person}
+            alt="Tom Oliver Chua"
+          />
+        </div>
       </div>
     </div>
   );

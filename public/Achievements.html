@@ -16,8 +16,31 @@
 
     <header class="hero">
       <h1>My Achievements</h1>
-      <p>A showcase of milestones and accomplishments</p>
+      <p>A comprehensive showcase of milestones and accomplishments.</p>
     </header>
+
+    <section class="stats">
+        <div class="stat">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <div class="num">7</div>
+            <div class="label">Seminars</div>
+        </div>
+        <div class="stat">
+            <i class="fas fa-briefcase"></i>
+            <div class="num">12</div>
+            <div class="label">Experience</div>
+        </div>
+        <div class="stat">
+            <i class="fas fa-code"></i>
+            <div class="num">20+</div>
+            <div class="label">Projects</div>
+        </div>
+        <div class="stat">
+            <i class="fas fa-users"></i>
+            <div class="num">100+</div>
+            <div class="label">Clients</div>
+  </div>
+    </section>
 
    <section class="grid md:grid-cols-3 gap-8 p-6">
   <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition transform hover:-translate-y-1">
@@ -192,160 +215,357 @@
 
     <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition transform hover:-translate-y-1">
         <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-            Community Speaker
+            Projects & Training
         </h3>
-        <p class="text-gray-500 mb-6">Shared knowledge in local events</p>
+        <p class="text-gray-500 mb-6">Key projects and training initiatives</p>
 
         <div class="space-y-6">
-            <div class="relative bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg shadow-sm hover:shadow-md transition">
-            <p class="font-semibold text-blue-600">August 15, 2025</p>
-            <p class="text-gray-700">BEYOND THE CODE: The Importance of Communication Skills</p>
+            <div class="relative bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer"
+                 onclick="openModal('../src/assets/images/blog/achievement-1.jpg')">
+            <p class="font-semibold text-blue-600">November 30, 2024</p>
+            <p class="text-gray-700">Point-of-Sale, Inventory and Sale Forecasting System for External Business Affairs Office - Cavite State University</p>
             </div>
-            <div class="relative bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg shadow-sm hover:shadow-md transition">
-            <p class="font-semibold text-blue-600">June 23, 2025</p>
-            <p class="text-gray-700">FROM RAW DATA TO INSIGHTS: The Power of Data Analytics</p>
+            <div class="relative bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer"
+                 onclick="openModal('../src/assets/images/blog/achievement-4.jpg')">
+            <p class="font-semibold text-blue-600">June 26, 2025</p>
+            <p class="text-gray-700">On-the-Job Training Program - Polytechnic University of the Philippines - Sto. Tomas</p>
             </div>
-            <div class="relative bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg shadow-sm hover:shadow-md transition">
-            <p class="font-semibold text-blue-600">September 24, 2024</p>
-            <p class="text-gray-700">BLOCKCHAIN TECHNOLOGY & CRYPTOCURRENCY</p>
+            <div class="relative bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer"
+                 onclick="openModal('../src/assets/images/blog/achievement-5.jpg')">
+            <p class="font-semibold text-blue-600">July 11, 2025</p>
+            <p class="text-gray-700">TechnoFair and Pitch Presentation 2025 - FEU Institute of Technology</p>
             </div>
         </div>
     </div>
 </section>
 
-
-    <section class="stats">
-        <div class="stat">
-            <i class="fas fa-chalkboard-teacher"></i>
-            <div class="num">7</div>
-            <div class="label">Seminars</div>
-        </div>
-        <div class="stat">
-            <i class="fas fa-briefcase"></i>
-            <div class="num">12</div>
-            <div class="label">Experience</div>
-        </div>
-        <div class="stat">
-            <i class="fas fa-code"></i>
-            <div class="num">20+</div>
-            <div class="label">Projects</div>
-        </div>
-        <div class="stat">
-            <i class="fas fa-users"></i>
-            <div class="num">100+</div>
-            <div class="label">Clients</div>
-  </div>
-    </section>
-
     <section class="media-gallery text-center">
-        <h2 class="text-2xl font-bold mb-6">Achievement Highlights</h2>
 
         <div class="certificates-section-title mt-12">
-            <h3 class="text-xl font-semibold mb-6">Seminars</h3>
+            <h3 class="text-xl font-semibold mb-6">Seminars & Guest Speaking</h3>
         </div>
 
-        <div class="certificates-row flex flex-wrap justify-center gap-6">
-            <div class="media-item w-72">
-                <img src="../src/assets/images/blog/seminar-1.jpg" alt="Seminar 1" 
-                    class="cursor-pointer w-full h-72 object-cover rounded-lg shadow-md"
-                    onclick="openModal(this.src)">
-                <div class="mt-3 text-center">
-                <p class="text-xl font-extrabold text-white"><strong>BEYOND THE CODE</strong></p>
+        <!-- Desktop Grid Layout (hidden on mobile) -->
+        <div class="hidden md:grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <!-- Top Row -->
+            <div class="bg-white rounded-xl shadow-lg cursor-pointer hover:shadow-xl transition-shadow h-64 flex overflow-hidden"
+                 onclick="openModal('../src/assets/images/blog/achievement-2.jpg')">
+                <div class="w-1/2 bg-white text-gray-800 p-6 flex flex-col justify-center">
+                    <h4 class="text-xl font-bold mb-3">Blockchain Technology</h4>
+                    <p class="text-sm font-semibold mb-2">"Blockchain Technology and Crypto Currency"</p>
+                    <p class="text-xs text-gray-600 mb-1">Our Lady of Fatima University</p>
+                    <p class="text-xs text-gray-500">September 24, 2024</p>
+                </div>
+                <div class="w-1/2">
+                    <img src="../src/assets/images/blog/achievement-2.jpg" alt="Blockchain Technology" 
+                         class="w-full h-full object-cover">
                 </div>
             </div>
 
-            <div class="media-item w-72">
-                <img src="../src/assets/images/blog/seminar-2.jpg" alt="Seminar 2" 
-                    class="cursor-pointer w-full h-72 object-cover rounded-lg shadow-md"
-                    onclick="openModal(this.src)">
-                <div class="mt-3 text-center">
-                <p class="text-xl font-extrabold text-white"><strong>FROM RAW DATA TO INSIGHTS</strong></p>
+            <div class="bg-white rounded-xl shadow-lg cursor-pointer hover:shadow-xl transition-shadow h-64 flex overflow-hidden"
+                 onclick="openModal('../src/assets/images/blog/seminar-1.jpg')">
+                <div class="w-1/2 bg-white text-gray-800 p-6 flex flex-col justify-center">
+                    <h4 class="text-xl font-bold mb-3">Seminar on Code</h4>
+                    <p class="text-sm font-semibold mb-2">"BEYOND THE CODE"</p>
+                    <p class="text-xs text-gray-600 mb-1">Shared knowledge on local events.</p>
+                    <p class="text-xs text-gray-500">August 12, 2025</p>
+                </div>
+                <div class="w-1/2">
+                    <img src="../src/assets/images/blog/seminar-1.jpg" alt="Beyond the Code" 
+                         class="w-full h-full object-cover">
                 </div>
             </div>
 
-            <div class="media-item w-72">
-                <img src="../src/assets/images/blog/seminar-3.jpg" alt="Seminar 3" 
-                    class="cursor-pointer w-full h-72 object-cover rounded-lg shadow-md"
-                    onclick="openModal(this.src)">
-                <div class="mt-3 text-center">
-                <p class="text-xl font-extrabold text-white"><strong>Blockchain Technology & Cryptocurrency</strong></p>
+            <!-- Bottom Row -->
+            <div class="bg-white rounded-xl shadow-lg cursor-pointer hover:shadow-xl transition-shadow h-64 flex overflow-hidden"
+                 onclick="openModal('../src/assets/images/blog/seminar-2.jpg')">
+                <div class="w-1/2 bg-white text-gray-800 p-6 flex flex-col justify-center">
+                    <h4 class="text-xl font-bold mb-3">Guest Speaking</h4>
+                    <p class="text-sm font-semibold mb-2">"Mastering Data for Business"</p>
+                    <p class="text-xs text-gray-600 mb-1">Shared knowledge on data analytics.</p>
+                    <p class="text-xs text-gray-500">June 22, 2025</p>
+                </div>
+                <div class="w-1/2">
+                    <img src="../src/assets/images/blog/seminar-2.jpg" alt="Data Analytics" 
+                         class="w-full h-full object-cover">
                 </div>
             </div>
 
-            <div class="media-item">
-            <video controls class="mx-auto rounded-lg shadow-md">
-                <source src="../src/assets/images/blog/Certicode.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p class="mt-2">Tom Tech Video Example</p>
+            <div class="bg-white rounded-xl shadow-lg cursor-pointer hover:shadow-xl transition-shadow h-64 flex overflow-hidden"
+                 onclick="openModal('../src/assets/images/blog/seminar-3.jpg')">
+                <div class="w-1/2 bg-white text-gray-800 p-6 flex flex-col justify-center">
+                    <h4 class="text-xl font-bold mb-3">Technology Seminar</h4>
+                    <p class="text-sm font-semibold mb-2">"Advanced Technology Solutions"</p>
+                    <p class="text-xs text-gray-600 mb-1">FEU Institute of Technology</p>
+                    <p class="text-xs text-gray-500">July 11, 2025</p>
+                </div>
+                <div class="w-1/2">
+                    <img src="../src/assets/images/blog/seminar-3.jpg" alt="Technology Seminar" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Carousel (visible only on mobile) -->
+        <div class="md:hidden relative max-w-6xl mx-auto px-4 mb-8">
+            <div class="carousel-container overflow-hidden">
+                <div class="carousel-track flex transition-transform duration-300 ease-in-out" id="seminarsCarousel">
+                    <!-- Seminar 1 -->
+                    <div class="carousel-slide flex-shrink-0 w-full px-2">
+                        <div class="bg-white rounded-xl shadow-lg cursor-pointer hover:shadow-xl transition-shadow flex flex-col overflow-hidden min-h-[280px]"
+                             onclick="openModal('../src/assets/images/blog/achievement-2.jpg')">
+                            <div class="w-full">
+                                <img src="../src/assets/images/blog/achievement-2.jpg" alt="Blockchain Technology" 
+                                     class="w-full h-48 object-cover">
+                            </div>
+                            <div class="w-full bg-white text-gray-800 p-4 flex flex-col justify-center">
+                                <h4 class="text-lg font-bold mb-2">Blockchain Technology</h4>
+                                <p class="text-sm font-semibold mb-1">"Blockchain Technology and Crypto Currency"</p>
+                                <p class="text-xs text-gray-600 mb-1">Our Lady of Fatima University</p>
+                                <p class="text-xs text-gray-500">September 24, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seminar 2 -->
+                    <div class="carousel-slide flex-shrink-0 w-full px-2">
+                        <div class="bg-white rounded-xl shadow-lg cursor-pointer hover:shadow-xl transition-shadow flex flex-col overflow-hidden min-h-[280px]"
+                             onclick="openModal('../src/assets/images/blog/seminar-1.jpg')">
+                            <div class="w-full">
+                                <img src="../src/assets/images/blog/seminar-1.jpg" alt="Beyond the Code" 
+                                     class="w-full h-48 object-cover">
+                            </div>
+                            <div class="w-full bg-white text-gray-800 p-4 flex flex-col justify-center">
+                                <h4 class="text-lg font-bold mb-2">Seminar on Code</h4>
+                                <p class="text-sm font-semibold mb-1">"BEYOND THE CODE"</p>
+                                <p class="text-xs text-gray-600 mb-1">Shared knowledge on local events.</p>
+                                <p class="text-xs text-gray-500">August 12, 2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seminar 3 -->
+                    <div class="carousel-slide flex-shrink-0 w-full px-2">
+                        <div class="bg-white rounded-xl shadow-lg cursor-pointer hover:shadow-xl transition-shadow flex flex-col overflow-hidden min-h-[280px]"
+                             onclick="openModal('../src/assets/images/blog/seminar-2.jpg')">
+                            <div class="w-full">
+                                <img src="../src/assets/images/blog/seminar-2.jpg" alt="Data Analytics" 
+                                     class="w-full h-48 object-cover">
+                            </div>
+                            <div class="w-full bg-white text-gray-800 p-4 flex flex-col justify-center">
+                                <h4 class="text-lg font-bold mb-2">Guest Speaking</h4>
+                                <p class="text-sm font-semibold mb-1">"Mastering Data for Business"</p>
+                                <p class="text-xs text-gray-600 mb-1">Shared knowledge on data analytics.</p>
+                                <p class="text-xs text-gray-500">June 22, 2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seminar 4 -->
+                    <div class="carousel-slide flex-shrink-0 w-full px-2">
+                        <div class="bg-white rounded-xl shadow-lg cursor-pointer hover:shadow-xl transition-shadow flex flex-col overflow-hidden min-h-[280px]"
+                             onclick="openModal('../src/assets/images/blog/seminar-3.jpg')">
+                            <div class="w-full">
+                                <img src="../src/assets/images/blog/seminar-3.jpg" alt="Technology Seminar" 
+                                     class="w-full h-48 object-cover">
+                            </div>
+                            <div class="w-full bg-white text-gray-800 p-4 flex flex-col justify-center">
+                                <h4 class="text-lg font-bold mb-2">Technology Seminar</h4>
+                                <p class="text-sm font-semibold mb-1">"Advanced Technology Solutions"</p>
+                                <p class="text-xs text-gray-600 mb-1">FEU Institute of Technology</p>
+                                <p class="text-xs text-gray-500">July 11, 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation buttons (mobile only) -->
+            <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg transition-all duration-200 z-10"
+                    onclick="moveSeminarsCarousel(-1)">
+                <i class="fas fa-chevron-left text-gray-600"></i>
+            </button>
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg transition-all duration-200 z-10"
+                    onclick="moveSeminarsCarousel(1)">
+                <i class="fas fa-chevron-right text-gray-600"></i>
+            </button>
+
+            <!-- Dots indicator (mobile only) -->
+            <div class="flex justify-center mt-4 space-x-2" id="seminarsIndicators">
+                <button class="w-3 h-3 rounded-full bg-blue-500 transition-all duration-200" onclick="goToSeminarsSlide(0)"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 transition-all duration-200" onclick="goToSeminarsSlide(1)"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 transition-all duration-200" onclick="goToSeminarsSlide(2)"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 transition-all duration-200" onclick="goToSeminarsSlide(3)"></button>
             </div>
         </div>
 
         <div class="certificates-section-title mt-12">
-            <h3 class="text-xl font-semibold mb-6">Certificates</h3>
+            <h3 class="text-xl font-semibold mb-6">Certifications & Licenses</h3>
         </div>
 
-        <div class="certificates-row flex flex-wrap justify-center gap-6">
-            <div class="media-item w-72">
-                <img src="../src/assets/images/blog/achievement-1.jpg" alt="Achievement 1"
-                    class="cursor-pointer w-full h-72 object-cover rounded-lg shadow-md"
-                    onclick="openModal(this.src)">
-                <div class="mt-3 text-center">
-                <p class="text-xl font-extrabold text-white"><strong>Point-of-Sale, Inventory and Sale Forecasting System for External Business Affairs Office</strong></p>
-                <br>
-                <p class="text-gray-300">Cavite State University - General Trias City</p>
-                <p class="text-gray-400 text-sm">November 30, 2024</p>
+        <!-- Desktop Grid Layout (hidden on mobile) -->
+        <div class="hidden md:grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <!-- Top Row -->
+            <div class="cursor-pointer flex flex-col" onclick="openModal('../src/assets/images/blog/IBM CONSULTING.jpg')">
+                <img src="../src/assets/images/blog/IBM CONSULTING.jpg" alt="IBM Consulting GenAI Architect" 
+                     class="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div class="bg-white p-4 rounded-lg shadow-md mt-4 flex-1 min-h-[100px]">
+                    <p class="font-bold text-gray-800 mb-2 text-sm leading-tight">IBM Consulting - Generative AI - Architect - Experienced</p>
+                    <p class="text-xs text-gray-600">Issued by IBM, Aug 2025</p>
                 </div>
             </div>
 
-            <div class="media-item w-72">
-                <img src="../src/assets/images/blog/achievement-2.jpg" alt="Achievement 2"
-                    class="cursor-pointer w-full h-72 object-cover rounded-lg shadow-md"
-                    onclick="openModal(this.src)">
-                <div class="mt-3 text-center">
-                <p class="text-xl font-extrabold text-white"><strong>Blockchain Technology and Crypto Currency</strong></p>
-                <br>
-                <p class="text-gray-300">Our Lady of Fatima University - Quezon City</p>
-                <p class="text-gray-400 text-sm">September 24, 2024</p>
+            <div class="cursor-pointer flex flex-col" onclick="openModal('../src/assets/images/blog/AWS CLOUD.jpg')">
+                <img src="../src/assets/images/blog/AWS CLOUD.jpg" alt="AWS Cloud Practitioner" 
+                     class="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div class="bg-white p-4 rounded-lg shadow-md mt-4 flex-1 min-h-[100px]">
+                    <p class="font-bold text-gray-800 mb-2 text-sm leading-tight">AWS Cloud Practitioner</p>
+                    <p class="text-xs text-gray-600">Issued by Udemy, Aug 2025</p>
                 </div>
             </div>
 
-            <div class="media-item w-72">
-                <img src="../src/assets/images/blog/achievement-3.jpg" alt="Achievement 3"
-                    class="cursor-pointer w-full h-72 object-cover rounded-lg shadow-md"
-                    onclick="openModal(this.src)">
-                <div class="mt-3 text-center">
-                <p class="text-xl font-extrabold text-white"><strong>Lorem ipsum dolor imet</strong></p>
-                <br>
-                <p class="text-gray-300">Our Lady of Fatima University - Quezon City</p>
-                <p class="text-gray-400 text-sm">June 14, 2025</p>
+            <div class="cursor-pointer flex flex-col" onclick="openModal('../src/assets/images/blog/WATSONX.jpg')">
+                <img src="../src/assets/images/blog/WATSONX.jpg" alt="IBM watsonx Essentials" 
+                     class="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div class="bg-white p-4 rounded-lg shadow-md mt-4 flex-1 min-h-[100px]">
+                    <p class="font-bold text-gray-800 mb-2 text-sm leading-tight">IBM watsonx Essentials</p>
+                    <p class="text-xs text-gray-600">Issued by IBM, Jan 2025</p>
                 </div>
             </div>
 
-            <div class="media-item w-72">
-                <img src="../src/assets/images/blog/achievement-4.jpg" alt="Achievement 4"
-                    class="cursor-pointer w-full h-72 object-cover rounded-lg shadow-md"
-                    onclick="openModal(this.src)">
-                <div class="mt-3 text-center">
-                <p class="text-xl font-extrabold text-white"><strong>On-the-Job Training Program</strong></p>
-                <br>
-                <p class="text-gray-300">Polytechnic University of the Philippines - Sto.Tomas</p>
-                <p class="text-gray-400 text-sm">June 26, 2025</p>
+            <!-- Bottom Row -->
+            <div class="cursor-pointer flex flex-col" onclick="openModal('../src/assets/images/blog/ARCHITECT CONCEPTS.jpg')">
+                <img src="../src/assets/images/blog/ARCHITECT CONCEPTS.jpg" alt="IBM Cloud Advanced Architect" 
+                     class="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div class="bg-white p-4 rounded-lg shadow-md mt-4 flex-1 min-h-[100px]">
+                    <p class="font-bold text-gray-800 mb-2 text-sm leading-tight">IBM Cloud Advanced Architect Concepts</p>
+                    <p class="text-xs text-gray-600">Issued by IBM, Aug 2025</p>
                 </div>
             </div>
 
-            <div class="media-item w-72">
-                <img src="../src/assets/images/blog/achievement-5.jpg" alt="Achievement 5"
-                    class="cursor-pointer w-full h-72 object-cover rounded-lg shadow-md"
-                    onclick="openModal(this.src)">
-                <div class="mt-3 text-center">
-                <p class="text-xl font-extrabold text-white"><strong>TechnoFair and Pitch Presentation 2025</strong></p>
-                <br>
-                <p class="text-gray-300">FEU Institute of Technology</p>
-                <p class="text-gray-400 text-sm">July 11, 2025</p>
+            <div class="cursor-pointer flex flex-col" onclick="openModal('../src/assets/images/blog/AGILE DEVOPS.jpg')">
+                <img src="../src/assets/images/blog/AGILE DEVOPS.jpg" alt="Agile DevOps" 
+                     class="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div class="bg-white p-4 rounded-lg shadow-md mt-4 flex-1 min-h-[100px]">
+                    <p class="font-bold text-gray-800 mb-2 text-sm leading-tight">Agile DevOps</p>
+                    <p class="text-xs text-gray-600">Issued by IBM, Aug 2025</p>
                 </div>
             </div>
+
+            <div class="cursor-pointer flex flex-col" onclick="openModal('../src/assets/images/blog/COMPTIA.png')">
+                <img src="../src/assets/images/blog/COMPTIA.png" alt="CompTIA Security+" 
+                     class="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div class="bg-white p-4 rounded-lg shadow-md mt-4 flex-1 min-h-[100px]">
+                    <p class="font-bold text-gray-800 mb-2 text-sm leading-tight">CompTIA Security+</p>
+                    <p class="text-xs text-gray-600">Issued by Erovoutika, Nov 2021</p>
+                </div>
             </div>
+        </div>
+
+        <!-- Mobile Carousel (visible only on mobile) -->
+        <div class="md:hidden relative max-w-6xl mx-auto px-4 mb-8">
+            <div class="carousel-container overflow-hidden">
+                <div class="carousel-track flex transition-transform duration-300 ease-in-out" id="certificatesCarousel">
+                    <!-- Certificate 1 -->
+                    <div class="carousel-slide flex-shrink-0 w-full px-2">
+                        <div class="cursor-pointer flex flex-col bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                             onclick="openModal('../src/assets/images/blog/IBM CONSULTING.jpg')">
+                            <img src="../src/assets/images/blog/IBM CONSULTING.jpg" alt="IBM Consulting GenAI Architect" 
+                                 class="w-full h-48 object-cover rounded-t-xl">
+                            <div class="p-4 flex-1">
+                                <p class="font-bold text-gray-800 mb-2 text-sm leading-tight">IBM Consulting - Generative AI - Architect - Experienced</p>
+                                <p class="text-xs text-gray-600">Issued by IBM, Aug 2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 2 -->
+                    <div class="carousel-slide flex-shrink-0 w-full px-2">
+                        <div class="cursor-pointer flex flex-col bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                             onclick="openModal('../src/assets/images/blog/AWS CLOUD.jpg')">
+                            <img src="../src/assets/images/blog/AWS CLOUD.jpg" alt="AWS Cloud Practitioner" 
+                                 class="w-full h-48 object-cover rounded-t-xl">
+                            <div class="p-4 flex-1">
+                                <p class="font-bold text-gray-800 mb-2 text-sm leading-tight">AWS Cloud Practitioner</p>
+                                <p class="text-xs text-gray-600">Issued by Udemy, Aug 2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 3 -->
+                    <div class="carousel-slide flex-shrink-0 w-full px-2">
+                        <div class="cursor-pointer flex flex-col bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                             onclick="openModal('../src/assets/images/blog/WATSONX.jpg')">
+                            <img src="../src/assets/images/blog/WATSONX.jpg" alt="IBM watsonx Essentials" 
+                                 class="w-full h-48 object-cover rounded-t-xl">
+                            <div class="p-4 flex-1">
+                                <p class="font-bold text-gray-800 mb-2 text-sm leading-tight">IBM watsonx Essentials</p>
+                                <p class="text-xs text-gray-600">Issued by IBM, Jan 2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 4 -->
+                    <div class="carousel-slide flex-shrink-0 w-full px-2">
+                        <div class="cursor-pointer flex flex-col bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                             onclick="openModal('../src/assets/images/blog/ARCHITECT CONCEPTS.jpg')">
+                            <img src="../src/assets/images/blog/ARCHITECT CONCEPTS.jpg" alt="IBM Cloud Advanced Architect" 
+                                 class="w-full h-48 object-cover rounded-t-xl">
+                            <div class="p-4 flex-1">
+                                <p class="font-bold text-gray-800 mb-2 text-sm leading-tight">IBM Cloud Advanced Architect Concepts</p>
+                                <p class="text-xs text-gray-600">Issued by IBM, Aug 2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 5 -->
+                    <div class="carousel-slide flex-shrink-0 w-full px-2">
+                        <div class="cursor-pointer flex flex-col bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                             onclick="openModal('../src/assets/images/blog/AGILE DEVOPS.jpg')">
+                            <img src="../src/assets/images/blog/AGILE DEVOPS.jpg" alt="Agile DevOps" 
+                                 class="w-full h-48 object-cover rounded-t-xl">
+                            <div class="p-4 flex-1">
+                                <p class="font-bold text-gray-800 mb-2 text-sm leading-tight">Agile DevOps</p>
+                                <p class="text-xs text-gray-600">Issued by IBM, Aug 2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 6 -->
+                    <div class="carousel-slide flex-shrink-0 w-full px-2">
+                        <div class="cursor-pointer flex flex-col bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                             onclick="openModal('../src/assets/images/blog/COMPTIA.png')">
+                            <img src="../src/assets/images/blog/COMPTIA.png" alt="CompTIA Security+" 
+                                 class="w-full h-48 object-cover rounded-t-xl">
+                            <div class="p-4 flex-1">
+                                <p class="font-bold text-gray-800 mb-2 text-sm leading-tight">CompTIA Security+</p>
+                                <p class="text-xs text-gray-600">Issued by Erovoutika, Nov 2021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation buttons (mobile only) -->
+            <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg transition-all duration-200 z-10"
+                    onclick="moveCertificatesCarousel(-1)">
+                <i class="fas fa-chevron-left text-gray-600"></i>
+            </button>
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg transition-all duration-200 z-10"
+                    onclick="moveCertificatesCarousel(1)">
+                <i class="fas fa-chevron-right text-gray-600"></i>
+            </button>
+
+            <!-- Dots indicator (mobile only) -->
+            <div class="flex justify-center mt-4 space-x-2" id="certificatesIndicators">
+                <button class="w-3 h-3 rounded-full bg-blue-500 transition-all duration-200" onclick="goToCertificatesSlide(0)"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 transition-all duration-200" onclick="goToCertificatesSlide(1)"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 transition-all duration-200" onclick="goToCertificatesSlide(2)"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 transition-all duration-200" onclick="goToCertificatesSlide(3)"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 transition-all duration-200" onclick="goToCertificatesSlide(4)"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 transition-all duration-200" onclick="goToCertificatesSlide(5)"></button>
+            </div>
+        </div>
 
 
         </section>
@@ -420,6 +640,141 @@
     document.getElementById("imageModal").classList.remove("flex");
     document.getElementById("imageModal").classList.add("hidden");
   }
+
+  // Seminars Carousel functionality
+  let seminarsCurrentSlide = 0;
+  const seminarsSlides = document.querySelectorAll('#seminarsCarousel .carousel-slide');
+  const seminarsIndicators = document.querySelectorAll('#seminarsIndicators button');
+
+  function updateSeminarsCarousel() {
+    const carousel = document.getElementById('seminarsCarousel');
+    if (carousel) {
+      carousel.style.transform = `translateX(-${seminarsCurrentSlide * 100}%)`;
+      
+      // Update indicators
+      seminarsIndicators.forEach((indicator, index) => {
+        if (index === seminarsCurrentSlide) {
+          indicator.classList.remove('bg-gray-300');
+          indicator.classList.add('bg-blue-500');
+        } else {
+          indicator.classList.remove('bg-blue-500');
+          indicator.classList.add('bg-gray-300');
+        }
+      });
+    }
+  }
+
+  function moveSeminarsCarousel(direction) {
+    const totalSlides = seminarsSlides.length;
+    seminarsCurrentSlide += direction;
+    
+    if (seminarsCurrentSlide >= totalSlides) {
+      seminarsCurrentSlide = 0;
+    } else if (seminarsCurrentSlide < 0) {
+      seminarsCurrentSlide = totalSlides - 1;
+    }
+    
+    updateSeminarsCarousel();
+  }
+
+  function goToSeminarsSlide(slideIndex) {
+    seminarsCurrentSlide = slideIndex;
+    updateSeminarsCarousel();
+  }
+
+  // Certificates Carousel functionality
+  let certificatesCurrentSlide = 0;
+  const certificatesSlides = document.querySelectorAll('#certificatesCarousel .carousel-slide');
+  const certificatesIndicators = document.querySelectorAll('#certificatesIndicators button');
+
+  function updateCertificatesCarousel() {
+    const carousel = document.getElementById('certificatesCarousel');
+    if (carousel) {
+      carousel.style.transform = `translateX(-${certificatesCurrentSlide * 100}%)`;
+      
+      // Update indicators
+      certificatesIndicators.forEach((indicator, index) => {
+        if (index === certificatesCurrentSlide) {
+          indicator.classList.remove('bg-gray-300');
+          indicator.classList.add('bg-blue-500');
+        } else {
+          indicator.classList.remove('bg-blue-500');
+          indicator.classList.add('bg-gray-300');
+        }
+      });
+    }
+  }
+
+  function moveCertificatesCarousel(direction) {
+    const totalSlides = certificatesSlides.length;
+    certificatesCurrentSlide += direction;
+    
+    if (certificatesCurrentSlide >= totalSlides) {
+      certificatesCurrentSlide = 0;
+    } else if (certificatesCurrentSlide < 0) {
+      certificatesCurrentSlide = totalSlides - 1;
+    }
+    
+    updateCertificatesCarousel();
+  }
+
+  function goToCertificatesSlide(slideIndex) {
+    certificatesCurrentSlide = slideIndex;
+    updateCertificatesCarousel();
+  }
+
+  // Initialize carousels when page loads
+  document.addEventListener('DOMContentLoaded', function() {
+    updateSeminarsCarousel();
+    updateCertificatesCarousel();
+  });
+
+  // Touch/swipe support for mobile
+  let startX = 0;
+  let endX = 0;
+
+  function handleTouchStart(e) {
+    startX = e.touches[0].clientX;
+  }
+
+  function handleTouchEnd(e, carouselType) {
+    endX = e.changedTouches[0].clientX;
+    const diffX = startX - endX;
+    
+    if (Math.abs(diffX) > 50) { // Minimum swipe distance
+      if (diffX > 0) {
+        // Swipe left - next slide
+        if (carouselType === 'seminars') {
+          moveSeminarsCarousel(1);
+        } else if (carouselType === 'certificates') {
+          moveCertificatesCarousel(1);
+        }
+      } else {
+        // Swipe right - previous slide
+        if (carouselType === 'seminars') {
+          moveSeminarsCarousel(-1);
+        } else if (carouselType === 'certificates') {
+          moveCertificatesCarousel(-1);
+        }
+      }
+    }
+  }
+
+  // Add touch event listeners
+  document.addEventListener('DOMContentLoaded', function() {
+    const seminarsCarousel = document.getElementById('seminarsCarousel');
+    const certificatesCarousel = document.getElementById('certificatesCarousel');
+    
+    if (seminarsCarousel) {
+      seminarsCarousel.addEventListener('touchstart', handleTouchStart);
+      seminarsCarousel.addEventListener('touchend', (e) => handleTouchEnd(e, 'seminars'));
+    }
+    
+    if (certificatesCarousel) {
+      certificatesCarousel.addEventListener('touchstart', handleTouchStart);
+      certificatesCarousel.addEventListener('touchend', (e) => handleTouchEnd(e, 'certificates'));
+    }
+  });
 </script>
 
 </html>

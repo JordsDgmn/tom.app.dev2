@@ -73,8 +73,8 @@ const Blog = () => {
   return (
     <div className="content py-25 px-2 relative" id="blog">
       <div className="max-w-135 text-center mx-auto pb-17.5">
-        <p className="section-title pb-6">Achievements</p>
-        <p className="text-xs xs:text-[16px] md:text-lg text-gray-400">
+        <p className="section-title pb-6 text-white">Achievements</p>
+        <p className="text-xs xs:text-[16px] md:text-lg text-white">
           Explore my portfolio to see highlights of my achievements in design, 
           development, and contributions to industry innovations.
         </p>
@@ -100,3 +100,4 @@ const Blog = () => {
 };
 
 export default Blog;
+

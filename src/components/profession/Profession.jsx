@@ -43,32 +43,35 @@ const rolesData = [
 const Profession = () => {
   return (
     <div
-      className="content grid md:grid-cols-2 max-xxl:px-4 xxl:px-2 py-10 md:py-15 lg:py-37.5"
+      className="content max-xxl:px-4 xxl:px-2 py-10 md:py-15 lg:py-20"
       id="services"
     >
-      <div className="flex flex-col justify-between h-fit md:pe-8 lg:pe-35.75 max-md:text-center my-auto">
-        <p className="section-title max-md:text-center">What I do?</p>
-        <div className="mt-6 text-[14px]">
-          <p className="text-xs sm:text-lg font-normal text-gray-400 mb-4">
-            I help companies ship reliable products end-to-end—from systems
-            design to mobile and web delivery—grounded in secure architectures,
-            elegant UX, and measurable business value.
-          </p>
-
+      {/* Header Section */}
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 lg:mb-12">
+        <div className="max-md:text-center">
+          <p className="section-title">What I do?</p>
+          <div className="mt-4 text-[14px]">
+            <p className="text-xs sm:text-lg font-normal text-gray-400">
+              I help companies ship reliable products end-to-end—from systems
+              design to mobile and web delivery—grounded in secure architectures,
+              elegant UX, and measurable business value.
+            </p>
+          </div>
         </div>
 
         <Link
           href="#contact"
           to={"contact"}
           smooth={true}
-          duration={900}
-          className="mt-5 md:mt-12.5 btn btn-primary text-white w-fit md:py-3 md:px-6 text-[12px] sm:text-[16px] font-semibold max-md:mx-auto max-md:mb-5"
+          duration={300}
+          className="mt-5 md:mt-0 btn btn-primary text-white w-fit md:py-3 md:px-6 text-[12px] sm:text-[16px] font-semibold max-md:mx-auto flex-shrink-0"
         >
           Say Hello!
         </Link>
-
       </div>
-      <div className="flex flex-wrap gap-2 w-auto max-h-[400px] overflow-y-auto">
+
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 w-full">
         {rolesData.map((role, index) => (
           <Roles role={role} key={index} />
         ))}
