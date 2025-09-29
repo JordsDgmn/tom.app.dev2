@@ -2,7 +2,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require __DIR__ . '/../vendor/autoload.php'; // adjust path to project root vendor
+require __DIR__ . '/vendor/autoload.php'; // Production path
 
 // Simple CORS + preflight handling
 header("Access-Control-Allow-Origin: *");
@@ -44,12 +44,25 @@ if ($name === '' || $email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL))
     exit;
 }
 
-// SMTP Configuration - use environment variables in production
-$smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
-$smtpUser = getenv('SMTP_USER') ?: 'dummydambi@gmail.com';
-$smtpPass = getenv('SMTP_PASS') ?: 'hjxu mcqt blnp dtnt'; // Use environment variable in production
-$smtpPort = getenv('SMTP_PORT') ?: 587;
-$smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
+// Load secure configuration
+$configPath = __DIR__ . '/config/email-config.php';
+if (file_exists($configPath)) {
+    $emailConfig = require $configPath;
+    $smtpHost = $emailConfig['smtp_host'];
+    $smtpUser = $emailConfig['smtp_user'];
+    $smtpPass = $emailConfig['smtp_pass'];
+    $smtpPort = $emailConfig['smtp_port'];
+    $smtpSecure = $emailConfig['smtp_secure'];
+    $recipientEmail = $emailConfig['recipient_email'];
+} else {
+    // Fallback to environment variables
+    $smtpHost = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
+    $smtpUser = getenv('SMTP_USER') ?: 'dummydambi@gmail.com';
+    $smtpPass = getenv('SMTP_PASS') ?: 'vcnnprnazykrjazr';
+    $smtpPort = getenv('SMTP_PORT') ?: 587;
+    $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
+    $recipientEmail = 'dummydambi@gmail.com';
+}
 
 $mail = new PHPMailer(true);
 
@@ -63,7 +76,7 @@ try {
     $mail->SMTPSecure = $smtpSecure;
     $mail->Port       = (int)$smtpPort;
     $mail->CharSet    = 'UTF-8';
-    $mail->SMTPDebug = 0; // Ensure clean JSON response
+    $mail->SMTPDebug = 0; // Disable debug output to avoid JSON interference
 
     // Important: set From to an address allowed by your SMTP server
     $mail->setFrom($smtpUser, 'Website Contact'); // do not set arbitrary From
@@ -71,7 +84,7 @@ try {
     $mail->addReplyTo($email, $name);
 
     // Recipient(s) - deliver to your inbox
-    $mail->addAddress('dummydambi@gmail.com');
+    $mail->addAddress($recipientEmail);
 
     // Content
     $mail->isHTML(true);
@@ -211,7 +224,7 @@ try {
                 </div>
                 
                 <div class='greeting'>
-                    Dear Khurt,
+                    Dear Site Owner,
                 </div>
                 
                 <p>You have received a new inquiry through your website contact form. Please find the details below:</p>

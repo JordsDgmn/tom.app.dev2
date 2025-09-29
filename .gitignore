@@ -46,3 +46,11 @@ __pycache__/
 
 # Composer
 composer.lock
+
+# Deployment & Security
+deployment-package/
+config/email-config.php
+*.config.php
+
+# Netlify
+netlify.toml
